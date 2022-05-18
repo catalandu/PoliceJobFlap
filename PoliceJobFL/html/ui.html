@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flap_police_job</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="ui.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cloakroom-menu" style="display: none;">
+        <div class="popup center" id="popup">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                You've successfully changed
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <div class="choose_1" id="complete_button1">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-child"></i>
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <div class="name"><span data-text="civilian outfit">civilian outfit</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_2" id="complete_button2">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-briefcase"></i>
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="name"><span data-text="custom outfit">custom outfit</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_3" id="complete_button3">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="far fa-clone"></i>
+                            <i class="far fa-clone"></i>
+                        </div>
+                        <div class="name"><span data-text="orange reflective vest">orange reflective vest</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_4" id="complete_button4">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-window-restore"></i>
+                            <i class="fas fa-window-restore"></i>
+                        </div>
+                        <div class="name"><span data-text="bulletproof vest">bulletproof vest</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="cloakroom_keys-menu" style="display: none;">
+        <div class="popup2 center" id="popup">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup2-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <div class="choose_5" id="complete_button5">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-key"></i>
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="name"><span data-text="take keys">take keys</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_6" id="complete_button6">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-key"></i>
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="name"><span data-text="return keys">return keys</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="custom_clothes_menu" style="display: none;">
+        <div class="popup2 center" id="popup">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup2-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <div class="choose_20" id="complete_button20">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-key"></i>
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="name"><span data-text="create outfit">create outfit</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_17" id="complete_button17">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-key"></i>
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="name"><span data-text="manage outfits">manage outfits</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="bossmenu" style="display: none;">
+
+        <div class="popup_recruit_succes center" id="money_shit_succes">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                <div id="title2"></div>
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup10-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+
+        
+        <ul>
+            <li>
+                <div class="choose_9" id="complete_button9">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-dollar-sign"></i>
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="name"><span data-text="manage money">manage money</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_10" id="complete_button10">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="name"><span data-text="manage employees">manage employees</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="manage_money" style="display: none;">
+
+        <div class="popup_withdraw center" id="money_shit">
+
+            <div class="icon">
+                <i class="fas fa-money-bill-alt"></i>
+            </div>
+            <div class="title">
+                withdraw money
+            </div>
+
+            <input placeholder="amount" type="number" id="info-button" name="quantity" class="inputWithMoney" min="0" max="1000000" step="1000">
+            
+            <div class="buttons">
+            <div class="accept-btn">
+                <button id="accept_wit">
+                    confirm
+                </button>
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup5-btn">
+                    cancel
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <div class="popup_money_succes center" id="money_shit_succes">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                <div id="money"></div>
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup2-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+
+        <div class="popup_money_fail center" id="money_shit_fail">
+            <div class="icon">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="title">
+                Fail
+            </div>
+            <div class="description">
+                Your company does not have enough money
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup2-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+
+        <div class="popup_deposit center" id="money_shit">
+
+            <div class="icon">
+                <i class="fas fa-money-bill-alt"></i>
+            </div>
+            <div class="title">
+                deposit money
+            </div>
+
+            <input placeholder="amount" type="number" id="info-button" name="quantity" class="inputWithDepMoney" min="0" max="1000000" step="1000">
+            
+            <div class="buttons">
+            <div class="accept-btn">
+                <button id="accept_dep">
+                    confirm
+                </button>
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup6-btn">
+                    cancel
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <div class="popup_money_dep_succes center" id="money_shit_succes">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                <div id="dep_money"></div>
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup11-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+
+        <div class="popup_money_dep_fail center" id="money_shit_fail">
+            <div class="icon">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="title">
+                Fail
+            </div>
+            <div class="description">
+                You does not have enough money
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup12-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+
+        <div class="popup_wash center" id="money_shit">
+
+            <div class="icon">
+                <i class="fas fa-money-bill-alt"></i>
+            </div>
+            <div class="title">
+                wash money
+            </div>
+
+            <input placeholder="amount" type="number" id="info-button" name="quantity" class="inputWithWashMoney" min="0" max="1000000" step="1000">
+            
+            <div class="buttons">
+            <div class="accept-btn">
+                <button id="accept_wash">
+                    confirm
+                </button>
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup7-btn">
+                    cancel
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <div class="popup_money_wash_succes center" id="money_shit_succes">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                <div id="wash_money"></div>
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup2-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+
+        <div class="popup_money_wash_fail center" id="money_shit_fail">
+            <div class="icon">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="title">
+                Fail
+            </div>
+            <div class="description">
+                You does not have enough black money
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup2-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <div class="choose_11" id="complete_button11" style="display: none;">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-dollar-sign"></i>
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="name"><span data-text="withdraw money">withdraw money</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_12" id="complete_button12">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-dollar-sign"></i>
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="name"><span data-text="deposit money">deposit money</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_13" id="complete_button13">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-dollar-sign"></i>
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="name"><span data-text="wash money">wash money</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="manage_employees" style="display: none;">
+
+            <div class="popup_man_sec_succes center" id="money_shit_succes">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                <div id="title2"></div>
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup9-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+
+        <div class="popup_manage_salary center" id="money_shit">
+
+            <div class="icon">
+                <i class="fas fa-money-bill-alt"></i>
+            </div>
+            <div class="title">
+                manage salary
+            </div>
+
+            <input placeholder="amount" type="number" id="info-button" name="quantity" class="inputManageSalary" min="0" max="1000000" step="1000">
+            
+            <div class="buttons">
+            <div class="accept-btn">
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup8-btn">
+                    cancel
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <div class="choose_14" id="complete_button14" style="display: none;">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-dollar-sign"></i>
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="name"><span data-text="salary management">salary management</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_15" id="complete_button15">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="name"><span data-text="employee list">employee list</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_16" id="complete_button16">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="name"><span data-text="recruit employee">recruit employee</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="armories_flp_nui" style="display: none;">
+
+        <ul>
+            <li>
+                <div class="choose_21" id="complete_button21">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-boxes"></i>
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="name"><span data-text="put in armory">put in armory</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_22" id="complete_button22">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-boxes"></i>
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="name"><span data-text="take from armory">take from armory</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_23" id="complete_button23">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-shopping-basket"></i>
+                            <i class="fas fa-shopping-basket"></i>
+                        </div>
+                        <div class="name"><span data-text="open shop">open shop</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="armories_other" style="display: none;">
+
+        <ul>
+            <li>
+                <div class="choose_24" id="complete_button24">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-boxes"></i>
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="name"><span data-text="open armory">open armory</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_25" id="complete_button25">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-shopping-basket"></i>
+                            <i class="fas fa-shopping-basket"></i>
+                        </div>
+                        <div class="name"><span data-text="open shop">open shop</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="garage-menu" style="display: none;">
+        <div class="popup3 center" id="popup">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                keys have been successfully lent to you
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup3-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+        <div class="popup4 center" id="popup">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                keys successfully returned
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup4-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <div class="choose_7" id="complete_button7">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-car"></i>
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="name"><span data-text="take vehicle">take vehicle</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_8" id="complete_button8">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-key"></i>
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="name"><span data-text="return Keys">return Keys</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="helicopters-menu" style="display: none;">
+        <div class="popup13 center" id="popup">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                The helicopter was successfully pulled out
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup13-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+        <div class="popup14 center" id="popup">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Success
+            </div>
+            <div class="description">
+                keys successfully returned
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup14-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+        <div class="helipad_full center" id="money_shit_fail">
+            <div class="icon">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="title">
+                Fail
+            </div>
+            <div class="description">
+                Helipad is full
+            </div>
+            <div class="dismiss-btn2">
+                <button id="dismiss-popup15-btn">
+                    confirm
+                </button>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <div class="choose_18" id="complete_button7">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-helicopter"></i>
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                        <div class="name"><span data-text="take helicopter">take helicopter</span></div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="choose_19" id="complete_button8">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-key"></i>
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="name"><span data-text="return Keys">return Keys</span></div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="popup_saveOutfits center" id="popup">
+
+        <div class="icon">
+            <i class="fas fa-tshirt"></i>
+        </div>
+        <div class="title">
+            save outfit
+        </div>
+        <div class="description">
+            Do you want to save the current outfit ?
+        </div>
+        <div class="dismiss-btn2">
+            <button id="dismiss-popup16-btn">
+                yes
+            </button>
+
+            <button id="dismiss-popup17-btn">
+                no
+            </button>
+        </div>
+    </div>
+
+    <div class="popup_saveOutfits_2 center" id="popup">
+
+        <div class="icon">
+            <i class="fas fa-tshirt"></i>
+        </div>
+        <div class="title">
+            Name your outfit
+        </div>
+        <input placeholder="outfit name" type="text" id="info-button-may" name="quantity" class="inputSetOutName">
+        <div class="dismiss-btn2">
+            <button id="dismiss-popup18-btn">
+                confirm
+            </button>
+        </div>
+    </div>
+
+    <div class="container" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="courseContainer">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-helicopters" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="HelicoptersList">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-salary" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="courseContainerSalary">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-recruit" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="courseContainerRecruit">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-employee" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="courseContainerEmployees">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-gradeList" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="courseContainerGradeList">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-createOutfits" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="courseContainerCreateOutfits">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-manageOutfits" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="courseContainerManageOutfits">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-putArmory" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="coursePutArmory">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-takeArmory" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="courseGetArmory">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-shopArmory" style="display: none;">
+        <div class="shopheader"></div>
+        <div class="shop">
+            <div class="courseShopArmory">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup_shitMenu center" id="money_shit">
+    </div>
+
+    <script src="ui.js"></script>
+</body>
+
+</html>
